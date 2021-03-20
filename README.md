@@ -1,2 +1,1 @@
-# cloudknowledge
-kubeadm join 192.168.207.138:6443 --token dbidt5.t18cprsf1f5cvgzi --discovery-token-ca-cert-hash sha256:d847abbbacc6218cd3281954f044cd38200579e8dc7df8a510597be00943d8ce
+kubeadm join 192.168.207.138:6443 --token c3c8x4.6ncwuehx2z8bxj4e --discovery-token-ca-cert-hash sha256:79120bb3572a1e1e0805983520ad3620b04c45f7c467abcf13ab30c2488dd367
