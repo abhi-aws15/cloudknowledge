@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: service
+metadata:
+  name: apache-deployment
+  labels:
+    app: apachedeployment
+spec:
+  selector:
+    app: apachedeployment
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 80
+      nodePort: 31200
