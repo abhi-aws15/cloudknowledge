@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: apache-deployment
+  namespace: project
 spec:
   selector:
     matchLabels:
@@ -20,7 +21,24 @@ spec:
     spec:
       containers:
       - name: apachedeployment
-        image: abhiaws/kubernetesproject
+        image: 192:168:207:129:8081/kube/webimage
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+      imagePullSecrets: regcred
+---
+apiVersion: v1
+kind: service
+metadata:
+  name: apache-deployment
+  namespace: project
+  labels:
+    app: apachedeployment
+spec:
+  selector:
+    app: apachedeployment
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: 80
+      nodePort: 31200
