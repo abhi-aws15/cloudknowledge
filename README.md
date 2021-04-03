@@ -1,3 +1,14 @@
+
+kubeadm join 192.168.43.101:6443 --token v5lc85.7s4eelx8xshu73qi --discovery-token-ca-cert-hash sha256:52bbd793693f2074e5a6ad76b7c9d7669eb082b3cdc5ce84d11046e468ba9319 
+
+
+
+
+
+
+
+
+
 apiVersion: v1
 clusters:
 - cluster:
