@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: apache-deployment
-  namespace: testing
 spec:
   selector:
     matchLabels:
@@ -21,7 +20,7 @@ spec:
     spec:
       containers:
       - name: apachedeployment
-        image: 192:168:207:167:8081/kube/webimage
+        image: 192:168:207:133:8081/demo/test
         imagePullPolicy: Always
         ports:
         - containerPort: 80
